@@ -16,7 +16,7 @@ const server = new ApolloServer({
 const start = async () => {
     try {
         await connectDB(process.env.MONGO_URI)
-        server.listen(port, () => console.log('Server started'))
+        server.listen(port, () => console.log(`DB connected and server started on port: ${port}`))
     } catch (error) {
         console.log('start: ', error)
     }
